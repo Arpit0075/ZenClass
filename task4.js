@@ -2,9 +2,27 @@
 
 var obj1 = { name: "Person 1", age: 5 };
 var obj2 = { age: 5, name: "Person 1" };
-let string1 = JSON.stringify(obj1);
-let string2 = JSON.stringify(obj2);
-console.log(string1 === string2);
+let values1 = Object.values(obj1);
+let values2 = Object.values(obj2);
+
+let flag = true;
+//checking length
+if (values1.length === values2.length) {
+  for (let i in values1) {
+    //if values are included then flag will be true and true will be printed in console
+    if (values2.includes(values1[i])) {
+    } else {
+      // if values are not included then flag will be false and false will be printed in console
+      flag = false;
+      break;
+    }
+  }
+}
+if (flag) {
+  console.log("true");
+} else {
+  console.log("false");
+}
 
 //XML Http request
 var xhr = new XMLHttpRequest();
@@ -18,13 +36,13 @@ xhr.onload = function () {
     console.log(countries[i].region);
     console.log(countries[i]["subregion"]);
     console.log(countries[i].population);
-    console.log(" --------");
+    console.log(" --------"); //for a gap
   }
 };
 xhr.onerror = function () {
   console.log("Error", this.statusText);
 };
-// xhr.send();
+xhr.send();
 
 // 1. Declare four variables without assigning values and print them in console
 let a, b, c, d;
