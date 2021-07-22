@@ -4,6 +4,7 @@
 3. Javascript can run in any browser engine as like JS core in safari and Spidermonkey in Firefox whereas Nodejs can only run in V8 engine of google chrome.
 4. Javascript is used in frontend development but Nodejs is basically used in server-side development.
 5. Javascript uses ECMA script but nodejs uses common Javascript modules.
+6. Javscript has access to Window, Document object where as NodeJs does not.
 
 //Is it necessary to use HTML, Head, Body tags?
 It is not necessary under some sepcific conditons like --
@@ -30,3 +31,6 @@ But it is better to use those tags for better code readibility in browser englin
 4. Layout takes places which computes which element will be placed where .  
 5. Painting computes bitmaps(coverts img to bits) and composites to screen.
 6. Inline css can be used on section which we want to render first that will delay other components.
+
+///What is prototype?
+Prototypes are the mechanism by which JavaScript objects inherit features from one another.
