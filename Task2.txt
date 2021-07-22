@@ -1,0 +1,46 @@
+// Task to use for, for in, for of, forEach to print elements of obj.
+var obj = [
+  { person: "Name 1", age: "2", company: "GUVI" },
+  { person: "Name 2", age: "5", company: "GUVI geek" },
+  { person: "Name 3", age: "8", company: "GUVI geek network" },
+];
+
+for (let i = 0; i < obj.length; i++) {
+  console.log(obj[i]);
+}
+for (let i in obj) {
+  console.log(obj[i]);
+}
+
+for (let i of obj) {
+  console.log(i);
+}
+
+obj.forEach((e) => console.log(e));
+
+// Make XML Http request and print flag,name,region,subregion,population of individual countries.
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.onload = function () {
+  var countries = JSON.parse(this.response);
+  console.log(countries) 
+  for (let i in countries) {
+    console.log(countries[i].name);
+    console.log(countries[i].flag);
+    console.log((countries[i].region);
+    console.log((countries[i]["subregion"]);
+    console.log((countries[i].population);
+    console.log(" --------");
+  }
+};
+xhr.onerror = function () {
+  console.log("Error", this.statusText);
+};
+xhr.send();
+
+//Difference between Windows, Document and Screen in Javascript.
+Window is the main JavaScript object root, it is the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window.
+
+Window.screen or just screen is a small information object about physical screen dimensions(height/width)
+
+Window.document or just document is the main object of the potentially visible (rendered) document object model/DOM.
